@@ -36,64 +36,27 @@
     return self;
 }
 
-
-
-#pragma mark - UIViewController
+- (void)viewDidLoad{
+    [super viewDidLoad];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self loadObjects];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (void)objectsDidLoad:(NSError *)error{
+    [super objectsDidLoad:error];
 }
-
 
  // Override if you need to change the ordering of objects in the table.
 // return objects in a different indexpath order. in this case we return object based on the section, not row, the default is row.
 - (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
     if (indexPath.section < self.objects.count) {
-        return self.objects[indexPath.section];
+        return [self.objects objectAtIndex:indexPath.section];
     }else{
         return nil;
     }
-}
-
-#pragma mark - UITableViewDelegate
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    NSInteger sections = self.objects.count;
-    if (self.paginationEnabled && sections >0) {
-        sections ++;
-    }
-    return sections;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
-    if (indexPath.section == self.objects.count) {
-        UITableViewCell *cell = [self tableView:tableView cellForNextPageAtIndexPath:indexPath];
-        return cell;
-    }
-    static NSString *CellIdentifier = @"PhotoCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    PFImageView *photo = (PFImageView *)[cell viewWithTag:6];
-    photo.file = object[@"image"];
-    [photo loadInBackground];
-    NSLog(@"object = %@,at Index.section %ld",object,indexPath.section);
-    [photo loadInBackground:^(UIImage *image, NSError *error) {
-        if (error) {
-            NSLog(@"error");
-        }else{
-//            NSLog(@"image = %@",image);
-        }
-    }];
-    return cell;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -117,9 +80,35 @@
     
     profileImageView.file = profilePicture;
     [profileImageView loadInBackground];
-    
     return sectionHeaderView;
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    NSInteger sections = self.objects.count;
+    if (self.paginationEnabled && sections >0) {
+        sections ++;
+    }
+    return sections;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
+    if (indexPath.section == self.objects.count) {
+        UITableViewCell *cell = [self tableView:tableView cellForNextPageAtIndexPath:indexPath];
+        return cell;
+    }
+    static NSString *CellIdentifier = @"PhotoCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PFImageView *photo = (PFImageView *)[cell viewWithTag:1];
+    photo.file = object[@"image"];
+    [photo loadInBackground];
+    return cell;
+}
+
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section == self.objects.count) {
@@ -144,6 +133,12 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == self.objects.count && self.paginationEnabled) {
+        [self loadNextPage];
+    }
+}
+
 
 
 - (PFQuery *)queryForTable{
@@ -153,11 +148,6 @@
     return query;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == self.objects.count && self.paginationEnabled) {
-        [self loadNextPage];
-    }
-}
 
 
 @end
