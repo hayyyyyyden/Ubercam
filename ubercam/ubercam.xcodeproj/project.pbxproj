@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3226B3B3190CA7E700CE7B80 /* ParseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3226B3B2190CA7E700CE7B80 /* ParseLoginViewController.m */; };
+		3226B3B5190CA92C00CE7B80 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3226B3B4190CA92C00CE7B80 /* Social.framework */; };
+		3226B3B7190CA93500CE7B80 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3226B3B6190CA93500CE7B80 /* Accounts.framework */; };
+		3226B3BA190CB50D00CE7B80 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3226B3B9190CB50D00CE7B80 /* CameraViewController.m */; };
+		32A63E11190A0B7F00AD6B95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E10190A0B7F00AD6B95 /* Foundation.framework */; };
+		32A63E13190A0B7F00AD6B95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E12190A0B7F00AD6B95 /* CoreGraphics.framework */; };
+		32A63E15190A0B7F00AD6B95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E14190A0B7F00AD6B95 /* UIKit.framework */; };
+		32A63E1B190A0B7F00AD6B95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32A63E19190A0B7F00AD6B95 /* InfoPlist.strings */; };
+		32A63E1D190A0B7F00AD6B95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A63E1C190A0B7F00AD6B95 /* main.m */; };
+		32A63E21190A0B7F00AD6B95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A63E20190A0B7F00AD6B95 /* AppDelegate.m */; };
+		32A63E23190A0B7F00AD6B95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A63E22190A0B7F00AD6B95 /* Images.xcassets */; };
+		32A63E2A190A0B7F00AD6B95 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E29190A0B7F00AD6B95 /* XCTest.framework */; };
+		32A63E2B190A0B7F00AD6B95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E10190A0B7F00AD6B95 /* Foundation.framework */; };
+		32A63E2C190A0B7F00AD6B95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E14190A0B7F00AD6B95 /* UIKit.framework */; };
+		32A63E34190A0B7F00AD6B95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32A63E32190A0B7F00AD6B95 /* InfoPlist.strings */; };
+		32A63E36190A0B7F00AD6B95 /* ubercamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A63E35190A0B7F00AD6B95 /* ubercamTests.m */; };
+		32A63E40190A0BCB00AD6B95 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A63E3F190A0BCB00AD6B95 /* MainStoryboard.storyboard */; };
+		32A63E42190A0E9B00AD6B95 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E41190A0E9B00AD6B95 /* Parse.framework */; };
+		32A63E4C190A0F3000AD6B95 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E43190A0F3000AD6B95 /* AudioToolbox.framework */; };
+		32A63E4D190A0F3000AD6B95 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E44190A0F3000AD6B95 /* CFNetwork.framework */; };
+		32A63E4E190A0F3000AD6B95 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E45190A0F3000AD6B95 /* CoreLocation.framework */; };
+		32A63E4F190A0F3000AD6B95 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E46190A0F3000AD6B95 /* libz.dylib */; };
+		32A63E50190A0F3000AD6B95 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E47190A0F3000AD6B95 /* MobileCoreServices.framework */; };
+		32A63E51190A0F3000AD6B95 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E48190A0F3000AD6B95 /* QuartzCore.framework */; };
+		32A63E52190A0F3000AD6B95 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E49190A0F3000AD6B95 /* Security.framework */; };
+		32A63E53190A0F3000AD6B95 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E4A190A0F3000AD6B95 /* StoreKit.framework */; };
+		32A63E54190A0F3000AD6B95 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E4B190A0F3000AD6B95 /* SystemConfiguration.framework */; };
+		32A63E57190A124200AD6B95 /* ParseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A63E56190A124200AD6B95 /* ParseTableViewController.m */; };
+		32A63E5A190A149B00AD6B95 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A63E59190A149B00AD6B95 /* HomeViewController.m */; };
+		32A63E5D190A170100AD6B95 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A63E5C190A170100AD6B95 /* LoginViewController.m */; };
+		32A63E60190A170F00AD6B95 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A63E5F190A170F00AD6B95 /* SignUpViewController.m */; };
+		32A63E62190A1EDA00AD6B95 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E61190A1EDA00AD6B95 /* FacebookSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32A63E2D190A0B7F00AD6B95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32A63E05190A0B7F00AD6B95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32A63E0C190A0B7F00AD6B95;
+			remoteInfo = ubercam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3226B3B1190CA7E700CE7B80 /* ParseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLoginViewController.h; sourceTree = "<group>"; };
+		3226B3B2190CA7E700CE7B80 /* ParseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLoginViewController.m; sourceTree = "<group>"; };
+		3226B3B4190CA92C00CE7B80 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		3226B3B6190CA93500CE7B80 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		3226B3B8190CB50D00CE7B80 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
+		3226B3B9190CB50D00CE7B80 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
+		32A63E0D190A0B7F00AD6B95 /* ubercam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ubercam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32A63E10190A0B7F00AD6B95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		32A63E12190A0B7F00AD6B95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		32A63E14190A0B7F00AD6B95 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		32A63E18190A0B7F00AD6B95 /* ubercam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ubercam-Info.plist"; sourceTree = "<group>"; };
+		32A63E1A190A0B7F00AD6B95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		32A63E1C190A0B7F00AD6B95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32A63E1E190A0B7F00AD6B95 /* ubercam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ubercam-Prefix.pch"; sourceTree = "<group>"; };
+		32A63E1F190A0B7F00AD6B95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		32A63E20190A0B7F00AD6B95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		32A63E22190A0B7F00AD6B95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		32A63E28190A0B7F00AD6B95 /* ubercamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ubercamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32A63E29190A0B7F00AD6B95 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		32A63E31190A0B7F00AD6B95 /* ubercamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ubercamTests-Info.plist"; sourceTree = "<group>"; };
+		32A63E33190A0B7F00AD6B95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		32A63E35190A0B7F00AD6B95 /* ubercamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ubercamTests.m; sourceTree = "<group>"; };
+		32A63E3F190A0BCB00AD6B95 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		32A63E41190A0E9B00AD6B95 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		32A63E43190A0F3000AD6B95 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		32A63E44190A0F3000AD6B95 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		32A63E45190A0F3000AD6B95 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		32A63E46190A0F3000AD6B95 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		32A63E47190A0F3000AD6B95 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		32A63E48190A0F3000AD6B95 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		32A63E49190A0F3000AD6B95 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		32A63E4A190A0F3000AD6B95 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		32A63E4B190A0F3000AD6B95 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		32A63E55190A124200AD6B95 /* ParseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTableViewController.h; sourceTree = "<group>"; };
+		32A63E56190A124200AD6B95 /* ParseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTableViewController.m; sourceTree = "<group>"; };
+		32A63E58190A149B00AD6B95 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		32A63E59190A149B00AD6B95 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		32A63E5B190A170100AD6B95 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		32A63E5C190A170100AD6B95 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		32A63E5E190A170F00AD6B95 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		32A63E5F190A170F00AD6B95 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		32A63E61190A1EDA00AD6B95 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32A63E0A190A0B7F00AD6B95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3226B3B7190CA93500CE7B80 /* Accounts.framework in Frameworks */,
+				3226B3B5190CA92C00CE7B80 /* Social.framework in Frameworks */,
+				32A63E4C190A0F3000AD6B95 /* AudioToolbox.framework in Frameworks */,
+				32A63E4D190A0F3000AD6B95 /* CFNetwork.framework in Frameworks */,
+				32A63E4E190A0F3000AD6B95 /* CoreLocation.framework in Frameworks */,
+				32A63E4F190A0F3000AD6B95 /* libz.dylib in Frameworks */,
+				32A63E50190A0F3000AD6B95 /* MobileCoreServices.framework in Frameworks */,
+				32A63E51190A0F3000AD6B95 /* QuartzCore.framework in Frameworks */,
+				32A63E52190A0F3000AD6B95 /* Security.framework in Frameworks */,
+				32A63E53190A0F3000AD6B95 /* StoreKit.framework in Frameworks */,
+				32A63E54190A0F3000AD6B95 /* SystemConfiguration.framework in Frameworks */,
+				32A63E13190A0B7F00AD6B95 /* CoreGraphics.framework in Frameworks */,
+				32A63E15190A0B7F00AD6B95 /* UIKit.framework in Frameworks */,
+				32A63E42190A0E9B00AD6B95 /* Parse.framework in Frameworks */,
+				32A63E11190A0B7F00AD6B95 /* Foundation.framework in Frameworks */,
+				32A63E62190A1EDA00AD6B95 /* FacebookSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32A63E25190A0B7F00AD6B95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A63E2A190A0B7F00AD6B95 /* XCTest.framework in Frameworks */,
+				32A63E2C190A0B7F00AD6B95 /* UIKit.framework in Frameworks */,
+				32A63E2B190A0B7F00AD6B95 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32A63E04190A0B7F00AD6B95 = {
+			isa = PBXGroup;
+			children = (
+				32A63E16190A0B7F00AD6B95 /* ubercam */,
+				32A63E2F190A0B7F00AD6B95 /* ubercamTests */,
+				32A63E0F190A0B7F00AD6B95 /* Frameworks */,
+				32A63E0E190A0B7F00AD6B95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32A63E0E190A0B7F00AD6B95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32A63E0D190A0B7F00AD6B95 /* ubercam.app */,
+				32A63E28190A0B7F00AD6B95 /* ubercamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32A63E0F190A0B7F00AD6B95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3226B3B6190CA93500CE7B80 /* Accounts.framework */,
+				3226B3B4190CA92C00CE7B80 /* Social.framework */,
+				32A63E61190A1EDA00AD6B95 /* FacebookSDK.framework */,
+				32A63E43190A0F3000AD6B95 /* AudioToolbox.framework */,
+				32A63E44190A0F3000AD6B95 /* CFNetwork.framework */,
+				32A63E45190A0F3000AD6B95 /* CoreLocation.framework */,
+				32A63E46190A0F3000AD6B95 /* libz.dylib */,
+				32A63E47190A0F3000AD6B95 /* MobileCoreServices.framework */,
+				32A63E48190A0F3000AD6B95 /* QuartzCore.framework */,
+				32A63E49190A0F3000AD6B95 /* Security.framework */,
+				32A63E4A190A0F3000AD6B95 /* StoreKit.framework */,
+				32A63E4B190A0F3000AD6B95 /* SystemConfiguration.framework */,
+				32A63E41190A0E9B00AD6B95 /* Parse.framework */,
+				32A63E10190A0B7F00AD6B95 /* Foundation.framework */,
+				32A63E12190A0B7F00AD6B95 /* CoreGraphics.framework */,
+				32A63E14190A0B7F00AD6B95 /* UIKit.framework */,
+				32A63E29190A0B7F00AD6B95 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32A63E16190A0B7F00AD6B95 /* ubercam */ = {
+			isa = PBXGroup;
+			children = (
+				32A63E1F190A0B7F00AD6B95 /* AppDelegate.h */,
+				32A63E20190A0B7F00AD6B95 /* AppDelegate.m */,
+				3226B3B8190CB50D00CE7B80 /* CameraViewController.h */,
+				3226B3B9190CB50D00CE7B80 /* CameraViewController.m */,
+				3226B3B1190CA7E700CE7B80 /* ParseLoginViewController.h */,
+				3226B3B2190CA7E700CE7B80 /* ParseLoginViewController.m */,
+				32A63E58190A149B00AD6B95 /* HomeViewController.h */,
+				32A63E59190A149B00AD6B95 /* HomeViewController.m */,
+				32A63E55190A124200AD6B95 /* ParseTableViewController.h */,
+				32A63E56190A124200AD6B95 /* ParseTableViewController.m */,
+				32A63E3F190A0BCB00AD6B95 /* MainStoryboard.storyboard */,
+				32A63E5B190A170100AD6B95 /* LoginViewController.h */,
+				32A63E5C190A170100AD6B95 /* LoginViewController.m */,
+				32A63E5E190A170F00AD6B95 /* SignUpViewController.h */,
+				32A63E5F190A170F00AD6B95 /* SignUpViewController.m */,
+				32A63E22190A0B7F00AD6B95 /* Images.xcassets */,
+				32A63E17190A0B7F00AD6B95 /* Supporting Files */,
+			);
+			path = ubercam;
+			sourceTree = "<group>";
+		};
+		32A63E17190A0B7F00AD6B95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32A63E18190A0B7F00AD6B95 /* ubercam-Info.plist */,
+				32A63E19190A0B7F00AD6B95 /* InfoPlist.strings */,
+				32A63E1C190A0B7F00AD6B95 /* main.m */,
+				32A63E1E190A0B7F00AD6B95 /* ubercam-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32A63E2F190A0B7F00AD6B95 /* ubercamTests */ = {
+			isa = PBXGroup;
+			children = (
+				32A63E35190A0B7F00AD6B95 /* ubercamTests.m */,
+				32A63E30190A0B7F00AD6B95 /* Supporting Files */,
+			);
+			path = ubercamTests;
+			sourceTree = "<group>";
+		};
+		32A63E30190A0B7F00AD6B95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32A63E31190A0B7F00AD6B95 /* ubercamTests-Info.plist */,
+				32A63E32190A0B7F00AD6B95 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32A63E0C190A0B7F00AD6B95 /* ubercam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32A63E39190A0B7F00AD6B95 /* Build configuration list for PBXNativeTarget "ubercam" */;
+			buildPhases = (
+				32A63E09190A0B7F00AD6B95 /* Sources */,
+				32A63E0A190A0B7F00AD6B95 /* Frameworks */,
+				32A63E0B190A0B7F00AD6B95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ubercam;
+			productName = ubercam;
+			productReference = 32A63E0D190A0B7F00AD6B95 /* ubercam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		32A63E27190A0B7F00AD6B95 /* ubercamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32A63E3C190A0B7F00AD6B95 /* Build configuration list for PBXNativeTarget "ubercamTests" */;
+			buildPhases = (
+				32A63E24190A0B7F00AD6B95 /* Sources */,
+				32A63E25190A0B7F00AD6B95 /* Frameworks */,
+				32A63E26190A0B7F00AD6B95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32A63E2E190A0B7F00AD6B95 /* PBXTargetDependency */,
+			);
+			name = ubercamTests;
+			productName = ubercamTests;
+			productReference = 32A63E28190A0B7F00AD6B95 /* ubercamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32A63E05190A0B7F00AD6B95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Fang YiXiong";
+				TargetAttributes = {
+					32A63E27190A0B7F00AD6B95 = {
+						TestTargetID = 32A63E0C190A0B7F00AD6B95;
+					};
+				};
+			};
+			buildConfigurationList = 32A63E08190A0B7F00AD6B95 /* Build configuration list for PBXProject "ubercam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 32A63E04190A0B7F00AD6B95;
+			productRefGroup = 32A63E0E190A0B7F00AD6B95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32A63E0C190A0B7F00AD6B95 /* ubercam */,
+				32A63E27190A0B7F00AD6B95 /* ubercamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32A63E0B190A0B7F00AD6B95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A63E40190A0BCB00AD6B95 /* MainStoryboard.storyboard in Resources */,
+				32A63E1B190A0B7F00AD6B95 /* InfoPlist.strings in Resources */,
+				32A63E23190A0B7F00AD6B95 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32A63E26190A0B7F00AD6B95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A63E34190A0B7F00AD6B95 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32A63E09190A0B7F00AD6B95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A63E21190A0B7F00AD6B95 /* AppDelegate.m in Sources */,
+				3226B3BA190CB50D00CE7B80 /* CameraViewController.m in Sources */,
+				32A63E1D190A0B7F00AD6B95 /* main.m in Sources */,
+				32A63E60190A170F00AD6B95 /* SignUpViewController.m in Sources */,
+				32A63E57190A124200AD6B95 /* ParseTableViewController.m in Sources */,
+				32A63E5A190A149B00AD6B95 /* HomeViewController.m in Sources */,
+				3226B3B3190CA7E700CE7B80 /* ParseLoginViewController.m in Sources */,
+				32A63E5D190A170100AD6B95 /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32A63E24190A0B7F00AD6B95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A63E36190A0B7F00AD6B95 /* ubercamTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32A63E2E190A0B7F00AD6B95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32A63E0C190A0B7F00AD6B95 /* ubercam */;
+			targetProxy = 32A63E2D190A0B7F00AD6B95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		32A63E19190A0B7F00AD6B95 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32A63E1A190A0B7F00AD6B95 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		32A63E32190A0B7F00AD6B95 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32A63E33190A0B7F00AD6B95 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		32A63E37190A0B7F00AD6B95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		32A63E38190A0B7F00AD6B95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32A63E3A190A0B7F00AD6B95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ubercam/ubercam-Prefix.pch";
+				INFOPLIST_FILE = "ubercam/ubercam-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		32A63E3B190A0B7F00AD6B95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ubercam/ubercam-Prefix.pch";
+				INFOPLIST_FILE = "ubercam/ubercam-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		32A63E3D190A0B7F00AD6B95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ubercam.app/ubercam";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ubercam/ubercam-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ubercamTests/ubercamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		32A63E3E190A0B7F00AD6B95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ubercam.app/ubercam";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ubercam/ubercam-Prefix.pch";
+				INFOPLIST_FILE = "ubercamTests/ubercamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32A63E08190A0B7F00AD6B95 /* Build configuration list for PBXProject "ubercam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32A63E37190A0B7F00AD6B95 /* Debug */,
+				32A63E38190A0B7F00AD6B95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32A63E39190A0B7F00AD6B95 /* Build configuration list for PBXNativeTarget "ubercam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32A63E3A190A0B7F00AD6B95 /* Debug */,
+				32A63E3B190A0B7F00AD6B95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32A63E3C190A0B7F00AD6B95 /* Build configuration list for PBXNativeTarget "ubercamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32A63E3D190A0B7F00AD6B95 /* Debug */,
+				32A63E3E190A0B7F00AD6B95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32A63E05190A0B7F00AD6B95 /* Project object */;
+}
