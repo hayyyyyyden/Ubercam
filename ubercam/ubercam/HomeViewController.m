@@ -28,7 +28,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         // This table displays items in the Todo class
-        self.parseClassName = @"TestObject";
+        self.parseClassName = @"Photo";
         self.pullToRefreshEnabled = YES;
         self.paginationEnabled = YES;
         self.objectsPerPage = 3;
@@ -37,32 +37,127 @@
 }
 
 
-- (void)viewWillAppear:(BOOL)animated{
+
+#pragma mark - UIViewController
+
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self loadObjects];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+ // Override if you need to change the ordering of objects in the table.
+// return objects in a different indexpath order. in this case we return object based on the section, not row, the default is row.
+- (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
+    if (indexPath.section < self.objects.count) {
+        return self.objects[indexPath.section];
+    }else{
+        return nil;
+    }
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UITableViewDelegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    NSInteger sections = self.objects.count;
+    if (self.paginationEnabled && sections >0) {
+        sections ++;
+    }
+    return sections;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
+    if (indexPath.section == self.objects.count) {
+        UITableViewCell *cell = [self tableView:tableView cellForNextPageAtIndexPath:indexPath];
+        return cell;
+    }
+    static NSString *CellIdentifier = @"PhotoCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PFImageView *photo = (PFImageView *)[cell viewWithTag:6];
+    photo.file = object[@"image"];
+    [photo loadInBackground];
+    NSLog(@"object = %@,at Index.section %ld",object,indexPath.section);
+    [photo loadInBackground:^(UIImage *image, NSError *error) {
+        if (error) {
+            NSLog(@"error");
+        }else{
+//            NSLog(@"image = %@",image);
+        }
+    }];
+    return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (section == self.objects.count) {
+        return nil;
+    }
+    static NSString *CellIdentifier = @"SectionHeaderCell";
+    UITableViewCell *sectionHeaderView = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    PFImageView *profileImageView = (PFImageView *)[sectionHeaderView viewWithTag:1];
+    UILabel *userNameLabel = (UILabel *)[sectionHeaderView viewWithTag:2];
+    UILabel *titleLabel = (UILabel *)[sectionHeaderView viewWithTag:3];
+    
+    PFObject *photo = self.objects[section];
+    PFUser *user = photo[@"whoTook"];
+    PFFile *profilePicture = user[@"profilePicture"];
+    NSString *title = photo[@"title"];
+    
+    userNameLabel.text = user.username;
+    titleLabel.text = title;
+    
+    profileImageView.file = profilePicture;
+    [profileImageView loadInBackground];
+    
+    return sectionHeaderView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == self.objects.count) {
+        return 0.0f;
+    }
+    return 50.0f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == self.objects.count) {
+        return 50.0f;
+    }
+    return 320.f;
+}
+
+//Override this method to customize the cell that allows the user to load the
+//next page when pagination is turned on.
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"LoadMoreCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    return cell;
+}
+
+
+
+- (PFQuery *)queryForTable{
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    [query includeKey:@"whoTook"];
+    [query orderByDescending:@"createdAt"];
+    return query;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == self.objects.count && self.paginationEnabled) {
+        [self loadNextPage];
+    }
+}
+
 
 @end
