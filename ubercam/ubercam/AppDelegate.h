@@ -13,4 +13,5 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) NSMutableData *profilePictureData;
+- (void)presentLoginControllerAnimated:(BOOL)animated;
 @end

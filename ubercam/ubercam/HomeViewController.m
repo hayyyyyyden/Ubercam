@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 
 @interface HomeViewController ()
-
+@property (nonatomic, strong) NSMutableArray *followingArray;
 @end
 
 @implementation HomeViewController
@@ -47,11 +47,27 @@
 
 - (void)objectsDidLoad:(NSError *)error{
     [super objectsDidLoad:error];
+    PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
+    [query whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+    [query whereKey:@"type" equalTo:@"follow"];
+    [query includeKey:@"toUser"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            self.followingArray = [[NSMutableArray alloc] init];
+            if (objects.count > 0) {
+                for (PFObject *activiy in objects) {
+                    PFUser *user = activiy[@"toUser"];
+                    [self.followingArray addObject:user.objectId];
+                }
+            }
+            [self.tableView reloadData];
+        }
+    }];
 }
 
  // Override if you need to change the ordering of objects in the table.
 // return objects in a different indexpath order. in this case we return object based on the section, not row, the default is row.
-- (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
+- (PFObject *)objectAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section < self.objects.count) {
         return [self.objects objectAtIndex:indexPath.section];
     }else{
@@ -80,6 +96,22 @@
     
     profileImageView.file = profilePicture;
     [profileImageView loadInBackground];
+    
+    //follow button configuration
+    FollowButton *followButton = (FollowButton *)[sectionHeaderView viewWithTag:4];
+    followButton.delegate = self;
+    followButton.sectionIndex = section;
+    if (!self.followingArray || [user.objectId isEqualToString:[PFUser currentUser].objectId]) {
+        followButton.hidden = YES;
+    } else {
+        followButton.hidden = NO;
+        NSInteger indexOfMatchedObject = [self.followingArray indexOfObject:user.objectId];
+        if (indexOfMatchedObject == NSNotFound) {
+            followButton.selected = NO;
+        }else{
+            followButton.selected = YES;
+        }
+    }
     return sectionHeaderView;
 }
 
@@ -139,15 +171,52 @@
     }
 }
 
-
-
 - (PFQuery *)queryForTable{
+    if (![PFUser currentUser] || ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        return nil;
+    }
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     [query includeKey:@"whoTook"];
     [query orderByDescending:@"createdAt"];
     return query;
 }
 
+- (void)followButton:(FollowButton *)button didTapWithSectionIndex:(NSInteger)index{
+    PFObject *photo = self.objects[index];
+    PFUser *user = photo[@"whoTook"];
+    
+    if (!button.isSelected) {
+        [self followUser:user];
+    }else{
+        [self unFollowUser:user];
+    }
+    [self.tableView reloadData];
+}
 
+- (void)followUser:(PFUser *)user{
+    if (![user.objectId isEqualToString:[PFUser currentUser].objectId]) {
+        [self.followingArray addObject:user.objectId];
+        PFObject *followActivity = [PFObject objectWithClassName:@"Activity"];
+        followActivity[@"fromUser"] = [PFUser currentUser];
+        followActivity[@"toUser"] = user;
+        followActivity[@"type"] = @"follow";
+        [followActivity saveEventually];
+    }
+}
+
+- (void)unFollowUser:(PFUser *)user{
+    [self.followingArray removeObject:user.objectId];
+    PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
+    [query whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+    [query whereKey:@"toUser" equalTo:user];
+    [query whereKey:@"type" equalTo:@"follow"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for (PFObject *followActivity in objects) {
+                [followActivity deleteEventually];
+            }
+        }
+    }];
+}
 
 @end

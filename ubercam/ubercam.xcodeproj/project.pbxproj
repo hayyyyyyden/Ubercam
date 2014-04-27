@@ -11,6 +11,8 @@
 		3226B3B5190CA92C00CE7B80 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3226B3B4190CA92C00CE7B80 /* Social.framework */; };
 		3226B3B7190CA93500CE7B80 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3226B3B6190CA93500CE7B80 /* Accounts.framework */; };
 		3226B3BA190CB50D00CE7B80 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3226B3B9190CB50D00CE7B80 /* CameraViewController.m */; };
+		3226B3C1190D0A8800CE7B80 /* FollowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3226B3C0190D0A8800CE7B80 /* FollowButton.m */; };
+		3226B3C4190D2FF400CE7B80 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3226B3C3190D2FF400CE7B80 /* ProfileViewController.m */; };
 		32A63E11190A0B7F00AD6B95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E10190A0B7F00AD6B95 /* Foundation.framework */; };
 		32A63E13190A0B7F00AD6B95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E12190A0B7F00AD6B95 /* CoreGraphics.framework */; };
 		32A63E15190A0B7F00AD6B95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A63E14190A0B7F00AD6B95 /* UIKit.framework */; };
@@ -58,6 +60,10 @@
 		3226B3B6190CA93500CE7B80 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		3226B3B8190CB50D00CE7B80 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
 		3226B3B9190CB50D00CE7B80 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
+		3226B3BF190D0A8800CE7B80 /* FollowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowButton.h; sourceTree = "<group>"; };
+		3226B3C0190D0A8800CE7B80 /* FollowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowButton.m; sourceTree = "<group>"; };
+		3226B3C2190D2FF400CE7B80 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		3226B3C3190D2FF400CE7B80 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		32A63E0D190A0B7F00AD6B95 /* ubercam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ubercam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A63E10190A0B7F00AD6B95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		32A63E12190A0B7F00AD6B95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -185,8 +191,12 @@
 				3226B3B9190CB50D00CE7B80 /* CameraViewController.m */,
 				3226B3B1190CA7E700CE7B80 /* ParseLoginViewController.h */,
 				3226B3B2190CA7E700CE7B80 /* ParseLoginViewController.m */,
+				3226B3C2190D2FF400CE7B80 /* ProfileViewController.h */,
+				3226B3C3190D2FF400CE7B80 /* ProfileViewController.m */,
 				32A63E58190A149B00AD6B95 /* HomeViewController.h */,
 				32A63E59190A149B00AD6B95 /* HomeViewController.m */,
+				3226B3BF190D0A8800CE7B80 /* FollowButton.h */,
+				3226B3C0190D0A8800CE7B80 /* FollowButton.m */,
 				32A63E55190A124200AD6B95 /* ParseTableViewController.h */,
 				32A63E56190A124200AD6B95 /* ParseTableViewController.m */,
 				32A63E3F190A0BCB00AD6B95 /* MainStoryboard.storyboard */,
@@ -329,7 +339,9 @@
 				3226B3BA190CB50D00CE7B80 /* CameraViewController.m in Sources */,
 				32A63E1D190A0B7F00AD6B95 /* main.m in Sources */,
 				32A63E60190A170F00AD6B95 /* SignUpViewController.m in Sources */,
+				3226B3C4190D2FF400CE7B80 /* ProfileViewController.m in Sources */,
 				32A63E57190A124200AD6B95 /* ParseTableViewController.m in Sources */,
+				3226B3C1190D0A8800CE7B80 /* FollowButton.m in Sources */,
 				32A63E5A190A149B00AD6B95 /* HomeViewController.m in Sources */,
 				3226B3B3190CA7E700CE7B80 /* ParseLoginViewController.m in Sources */,
 				32A63E5D190A170100AD6B95 /* LoginViewController.m in Sources */,
